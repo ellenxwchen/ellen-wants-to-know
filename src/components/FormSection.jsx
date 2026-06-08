@@ -13,10 +13,7 @@ export default function FormSection({ section, answers, onAnswer }) {
       </div>
 
       {section.blurb && (
-        <div className={styles.blurb}>
-          <span className={styles.blurbQuote}>"</span>
-          {section.blurb}
-        </div>
+        <p className={styles.blurb}>{section.blurb}</p>
       )}
 
       <div className={styles.questions}>
@@ -24,7 +21,7 @@ export default function FormSection({ section, answers, onAnswer }) {
           <Question
             key={question.id}
             question={question}
-            value={answers[question.id] ?? (question.type === 'multicheck' ? [] : '')}
+            value={answers[question.id] ?? (question.type === 'multicheck' ? [] : question.type === 'multicheck_freeform' ? { selected: [], freeform: '' } : '')}
             onChange={(val) => onAnswer(question.id, val)}
             index={i}
           />

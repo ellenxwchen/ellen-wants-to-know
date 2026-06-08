@@ -75,6 +75,39 @@ export default function Question({ question, value, onChange, index }) {
         </div>
       )}
 
+      {question.type === 'multicheck_freeform' && (
+        <div className={styles.checksFreeform}>
+          <div className={styles.checks}>
+            {question.options.map(opt => {
+              const checked = value?.selected?.includes(opt)
+              return (
+                <button
+                  key={opt}
+                  type="button"
+                  className={`${styles.check} ${checked ? styles.checkSelected : ''}`}
+                  onClick={() => {
+                    const current = value?.selected ?? []
+                    const next = checked ? current.filter(v => v !== opt) : [...current, opt]
+                    onChange({ ...value, selected: next })
+                  }}
+                >
+                  <span className={styles.checkBox}>{checked ? '✓' : ''}</span>
+                  {opt}
+                </button>
+              )
+            })}
+          </div>
+          <input
+            className={`${styles.input} ${styles.freeformInput}`}
+            type="text"
+            placeholder={question.freeformPlaceholder}
+            value={value?.freeform ?? ''}
+            onChange={e => onChange({ ...value, freeform: e.target.value })}
+            autoComplete="off"
+          />
+        </div>
+      )}
+
     </div>
   )
 }

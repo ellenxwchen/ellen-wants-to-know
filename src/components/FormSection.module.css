@@ -51,22 +51,7 @@
   font-size: 20px;
   line-height: 1.6;
   color: var(--ink-light);
-  background: var(--paper);
-  border-left: 3px solid var(--terracotta-light);
-  padding: 16px 20px;
   margin-bottom: 36px;
-  border-radius: 0 2px 2px 0;
-  position: relative;
-}
-
-.blurbQuote {
-  font-family: var(--font-serif);
-  font-size: 48px;
-  color: var(--terracotta-light);
-  line-height: 0;
-  vertical-align: -16px;
-  margin-right: 4px;
-  font-style: italic;
 }
 
 .questions {

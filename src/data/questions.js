@@ -4,7 +4,7 @@ export const sections = [
     title: "hey, you! 👋",
     subtitle: "before we get into it — who are you?",
     emoji: "✦",
-    blurb: "hi ♡  if you're reading this, you're a long-term long-distance family / friend member that I miss greatly! I want to make sure I still know your favourite things even though we're far apart.",
+    blurb: "hi ♡  if you're reading this, you're someone I love very much and I miss greatly! I want to make sure I still know your favourite things even though we're far apart.",
     questions: [
       {
         id: "name",
@@ -71,8 +71,9 @@ export const sections = [
       {
         id: "drink_order",
         label: "your drink order",
-        type: "choice",
+        type: "multicheck_freeform",
         options: ["coffee", "tea", "matcha", "none of these"],
+        freeformPlaceholder: "your usual order — e.g. oat flat white, matcha latte with oat milk...",
       },
       {
         id: "can_cook",

@@ -1,0 +1,107 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--cream);
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--cream-dark);
+  border-radius: 2px;
+  padding: 56px 48px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: var(--shadow-card);
+}
+
+.lock {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--font-hand);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--terracotta);
+  margin: 0 0 8px;
+}
+
+.sub {
+  font-family: var(--font-hand);
+  font-size: 18px;
+  color: var(--ink-faint);
+  margin: 0 0 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid var(--cream-dark);
+  border-bottom: 2px solid var(--ink-faint);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 12px 14px;
+  width: 100%;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.15s;
+  letter-spacing: 2px;
+}
+
+.input::placeholder {
+  color: var(--ink-faint);
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.input:focus {
+  border-bottom-color: var(--terracotta);
+}
+
+.btn {
+  font-family: var(--font-hand);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--paper);
+  background: var(--terracotta);
+  border: none;
+  cursor: pointer;
+  padding: 10px 28px;
+  border-radius: 2px;
+  transition: background 0.15s, transform 0.1s;
+  box-shadow: 2px 2px 0 rgba(44, 36, 22, 0.15);
+}
+
+.btn:hover {
+  background: #b8563f;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-8px); }
+  40%       { transform: translateX(8px); }
+  60%       { transform: translateX(-6px); }
+  80%       { transform: translateX(6px); }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+  border-bottom-color: var(--dusty-rose) !important;
+}

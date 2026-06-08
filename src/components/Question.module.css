@@ -99,6 +99,17 @@
   font-weight: 600;
 }
 
+/* multicheck + freeform */
+.checksFreeform {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.freeformInput {
+  margin-top: 4px;
+}
+
 /* fun check-in question */
 .choicesFun {
   gap: 14px;
