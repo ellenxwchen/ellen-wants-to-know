@@ -1,0 +1,170 @@
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-family: var(--font-hand);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  cursor: default;
+}
+
+.labelNum {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-faint);
+  letter-spacing: 0.5px;
+  min-width: 24px;
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--ink-faint);
+  font-style: italic;
+  margin: -4px 0 0;
+}
+
+.input,
+.textarea {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--cream-dark);
+  border-bottom: 2px solid var(--ink-faint);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 12px 14px;
+  width: 100%;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--cream-dark);
+  border-bottom-color: var(--terracotta);
+  box-shadow: 0 2px 0 var(--terracotta);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+
+/* choices (single select) */
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.choice {
+  font-family: var(--font-hand);
+  font-size: 17px;
+  color: var(--ink-light);
+  background: var(--paper);
+  border: 1.5px solid var(--cream-dark);
+  border-radius: 2px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s, transform 0.1s;
+  white-space: nowrap;
+}
+
+.choice:hover {
+  border-color: var(--terracotta-light);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.choice.choiceSelected {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: var(--paper);
+  font-weight: 600;
+}
+
+/* fun check-in question */
+.choicesFun {
+  gap: 14px;
+}
+
+.choiceFun {
+  font-size: 24px;
+  padding: 14px 32px;
+  letter-spacing: 0.5px;
+}
+
+.choiceFun.choiceSelected {
+  animation: wiggle 0.3s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%   { transform: rotate(0deg) scale(1); }
+  25%  { transform: rotate(-3deg) scale(1.05); }
+  50%  { transform: rotate(3deg) scale(1.08); }
+  75%  { transform: rotate(-2deg) scale(1.05); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+/* multicheck */
+.checks {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.check {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink-light);
+  background: var(--paper);
+  border: 1.5px solid var(--cream-dark);
+  border-radius: 2px;
+  padding: 8px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.check:hover {
+  border-color: var(--terracotta-light);
+}
+
+.check.checkSelected {
+  border-color: var(--terracotta);
+  background: rgba(196, 97, 74, 0.06);
+  color: var(--ink);
+}
+
+.checkBox {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--terracotta);
+}

@@ -1,0 +1,26 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cream-dark);
+  border: 1.5px solid var(--ink-faint);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.dot.done {
+  background: var(--terracotta-light);
+  border-color: var(--terracotta);
+}
+
+.dot.active {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  transform: scale(1.3);
+}

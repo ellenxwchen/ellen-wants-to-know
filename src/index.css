@@ -1,0 +1,41 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #faf7f2;
+  --cream-dark: #f2ece0;
+  --paper: #fffdf8;
+  --ink: #2c2416;
+  --ink-light: #6b5d4f;
+  --ink-faint: #b8a898;
+  --terracotta: #c4614a;
+  --terracotta-light: #e8927c;
+  --sage: #7a9e7e;
+  --dusty-rose: #d4849a;
+  --dusty-rose-light: #e8b4c2;
+  --mustard: #d4a843;
+  --tape: rgba(212, 168, 67, 0.35);
+  --shadow-soft: 0 2px 12px rgba(44, 36, 22, 0.08), 0 1px 3px rgba(44, 36, 22, 0.05);
+  --shadow-card: 0 4px 24px rgba(44, 36, 22, 0.12), 0 1px 4px rgba(44, 36, 22, 0.06);
+  --radius: 4px;
+  --font-hand: 'Caveat', cursive;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
