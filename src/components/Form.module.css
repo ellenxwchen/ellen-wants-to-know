@@ -25,12 +25,12 @@
 }
 
 .logo {
-  font-family: var(--font-hand);
+  font-family: var(--font-display);
   font-size: 22px;
-  font-weight: 600;
+  font-style: italic;
+  font-weight: 400;
   color: var(--terracotta);
   white-space: nowrap;
-  letter-spacing: 0.3px;
 }
 
 .main {
@@ -44,9 +44,8 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
   margin-top: 48px;
-  justify-content: flex-end;
 }
 
 .backBtn {
@@ -81,7 +80,7 @@
 }
 
 .nextBtn:hover {
-  background: #b8563f;
+  background: #4a6db8;
   transform: translateY(-1px);
   box-shadow: 2px 3px 0 rgba(44, 36, 22, 0.2);
 }

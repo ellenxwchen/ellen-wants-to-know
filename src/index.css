@@ -9,8 +9,8 @@
   --ink: #2c2416;
   --ink-light: #6b5d4f;
   --ink-faint: #b8a898;
-  --terracotta: #c4614a;
-  --terracotta-light: #e8927c;
+  --terracotta: #5b7ec9;
+  --terracotta-light: #8aaad9;
   --sage: #7a9e7e;
   --dusty-rose: #d4849a;
   --dusty-rose-light: #e8b4c2;
@@ -19,9 +19,10 @@
   --shadow-soft: 0 2px 12px rgba(44, 36, 22, 0.08), 0 1px 3px rgba(44, 36, 22, 0.05);
   --shadow-card: 0 4px 24px rgba(44, 36, 22, 0.12), 0 1px 4px rgba(44, 36, 22, 0.06);
   --radius: 4px;
-  --font-hand: 'Caveat', cursive;
+  --font-hand: 'DM Sans', system-ui, sans-serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Molle', cursive;
 }
 
 html, body {
