@@ -1,4 +1,27 @@
+import { useRef, useLayoutEffect } from 'react'
 import styles from './Question.module.css'
+
+function AutoGrowTextarea({ className, value, onChange, ...props }) {
+  const ref = useRef(null)
+
+  useLayoutEffect(() => {
+    const el = ref.current
+    if (!el) return
+    el.style.height = 'auto'
+    el.style.height = `${el.scrollHeight}px`
+  }, [value])
+
+  return (
+    <textarea
+      ref={ref}
+      className={className}
+      value={value}
+      onChange={onChange}
+      rows={1}
+      {...props}
+    />
+  )
+}
 
 export default function Question({ question, value, onChange, index }) {
   return (
@@ -13,10 +36,9 @@ export default function Question({ question, value, onChange, index }) {
       )}
 
       {question.type === 'short' && (
-        <input
+        <AutoGrowTextarea
           id={question.id}
           className={styles.input}
-          type="text"
           placeholder={question.placeholder}
           value={value}
           onChange={e => onChange(e.target.value)}
@@ -97,9 +119,8 @@ export default function Question({ question, value, onChange, index }) {
               )
             })}
           </div>
-          <input
+          <AutoGrowTextarea
             className={`${styles.input} ${styles.freeformInput}`}
-            type="text"
             placeholder={question.freeformPlaceholder}
             value={value?.freeform ?? ''}
             onChange={e => onChange({ ...value, freeform: e.target.value })}

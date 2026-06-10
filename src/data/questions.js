@@ -2,9 +2,9 @@ export const sections = [
   {
     id: "intro",
     title: "hey, you! 👋",
-    subtitle: "before we get into it — who are you?",
+    subtitle: "before we get into it, who are you?",
     emoji: "✦",
-    blurb: "hi ♡  if you're reading this, you're someone I love very much and I miss greatly! I want to make sure I still know your favourite things even though we're far apart.",
+    blurb: "hi ♡ if you're reading this, you're someone i love very much and i miss greatly! i want to make sure i still know your favourite things even though we're far apart.",
     questions: [
       {
         id: "name",
@@ -22,19 +22,19 @@ export const sections = [
     questions: [
       {
         id: "favorite_cuisine",
-        label: "favorite cuisine",
+        label: "top 3 favourite cuisines",
         type: "short",
         placeholder: "e.g. japanese, italian, ethiopian...",
       },
       {
         id: "favorite_meal",
-        label: "favorite meal of all time",
+        label: "favourite meal of all time ",
         type: "short",
-        placeholder: "be specific. what dish exactly?",
+        placeholder: "be specific",
       },
       {
         id: "least_favorite_food",
-        label: "food you genuinely cannot stand",
+        label: "food or texture you genuinely cannot stand",
         type: "short",
         placeholder: "the one that makes you say absolutely not",
       },
@@ -46,21 +46,21 @@ export const sections = [
       },
       {
         id: "favorite_candy",
-        label: "your candy",
+        label: "favourite candies",
         type: "short",
-        placeholder: "the one you'd grab at a gas station",
+        placeholder: "as many as you'd like!",
       },
       {
         id: "favorite_chips",
-        label: "your chip",
+        label: "favourite chips",
         type: "short",
-        placeholder: "brand + flavor counts",
+        placeholder: "also as many as you'd like!",
       },
       {
-        id: "favorite_fruit",
+        id: "favourite fruits",
         label: "your fruit",
         type: "short",
-        placeholder: "just pick one",
+        placeholder: "i love fruit",
       },
       {
         id: "savory_vs_sweet",
@@ -73,17 +73,17 @@ export const sections = [
         label: "your drink order",
         type: "multicheck_freeform",
         options: ["coffee", "tea", "matcha", "none of these"],
-        freeformPlaceholder: "your usual order — e.g. oat flat white, matcha latte with oat milk...",
+        freeformPlaceholder: "your usual order / how you make it!",
       },
       {
         id: "can_cook",
-        label: "a meal you can actually cook or bake",
+        label: "if you were in a cooking / baking competition, what would you make?",
         type: "short",
         placeholder: "your signature dish",
       },
       {
         id: "carb_forever",
-        label: "if you could only keep ONE forever:",
+        label: "if you could only keep ONE forever >:D",
         type: "choice",
         options: ["pasta", "bread", "rice", "potatoes"],
       },
@@ -99,13 +99,13 @@ export const sections = [
         id: "morning_night",
         label: "morning person or night owl?",
         type: "choice",
-        options: ["morning person", "night owl", "neither, I'm just tired", "depends on the season"],
+        options: ["morning person", "night owl", "depends on the season"],
       },
       {
         id: "routine_spontaneous",
         label: "routine or spontaneous?",
         type: "choice",
-        options: ["love a routine", "total chaos, always winging it", "routine with spontaneous moments", "spontaneous but with a secret spreadsheet"],
+        options: ["love a routine", "total chaos, always winging it", "routine with spontaneous bursts", "spontaneous but with a secret spreadsheet"],
       },
       {
         id: "love_language",
@@ -136,40 +136,40 @@ export const sections = [
         id: "bad_habit",
         label: "a bad habit you're working on",
         type: "short",
-        placeholder: "be honest",
+        placeholder: "be honest :) ",
       },
     ],
   },
   {
     id: "absurd",
     title: "the absurd questions",
-    subtitle: "no wrong answers. or maybe only wrong answers.",
+    subtitle: "no wrong answers! or maybe only wrong answers",
     emoji: "🌀",
     questions: [
-      {
-        id: "having_fun",
-        label: "are you having fun?",
-        type: "choice",
-        options: ["yes.", "YES!"],
-        fun: true,
-      },
       {
         id: "flavor_you_would_be",
         label: "if you were a flavor, what would you be?",
         type: "short",
-        placeholder: "and why (optional but encouraged)",
+        placeholder: "and why",
       },
       {
         id: "animal_you_would_be",
         label: "if you were an animal, what would you be?",
         type: "short",
-        placeholder: "the honest answer, not the aspirational one",
+        placeholder: "pls don't say wolf",
       },
       {
         id: "warning_label",
         label: "your personal warning label",
         type: "short",
         placeholder: "⚠️ warning: ...",
+      },
+      {
+        id: "having_fun",
+        label: "are you having fun answering these questions?",
+        type: "choice",
+        options: ["yes.", "yes", "YES!"],
+        fun: true,
       },
       {
         id: "free_day",
@@ -181,17 +181,17 @@ export const sections = [
         id: "superpower",
         label: "one superpower",
         type: "short",
-        placeholder: "you can only pick one",
+        placeholder: "you can only pick one!!",
       },
       {
         id: "master_skill",
         label: "a skill you'd master instantly if you could",
         type: "short",
-        placeholder: "anything",
+        placeholder: "doing laundry? ",
       },
       {
         id: "phone_verification",
-        label: "someone thinks your phone was stolen — what question would verify it's actually you?",
+        label: "your loved ones think you were kidnapped!! what question would they ask to make sure it's actually you?",
         type: "long",
         placeholder: "something only you would know the answer to",
       },
@@ -200,28 +200,28 @@ export const sections = [
   {
     id: "aesthetic",
     title: "aesthetic & taste",
-    subtitle: "small but telling",
+    subtitle: "",
     emoji: "✨",
     questions: [
       {
         id: "silver_or_gold",
         label: "silver, gold, or both?",
         type: "choice",
-        options: ["silver", "gold", "both", "neither — I'm a minimalist"],
+        options: ["silver", "gold", "both", "neither"],
       },
     ],
   },
   {
     id: "currently",
     title: "currently",
-    subtitle: "what's going on for you right now",
+    subtitle: "what's the happs",
     emoji: "📍",
     questions: [
       {
         id: "song_on_repeat",
         label: "song on repeat right now",
         type: "short",
-        placeholder: "artist — song title",
+        placeholder: "artist + song title",
       },
       {
         id: "rewatch_forever",
@@ -233,7 +233,7 @@ export const sections = [
         id: "really_into",
         label: "something you're really into right now",
         type: "short",
-        placeholder: "hobby, topic, thing, anything",
+        placeholder: "hobby, topic, game, thing, anything",
       },
       {
         id: "want_to_improve",
@@ -245,7 +245,7 @@ export const sections = [
         id: "bucket_list",
         label: "a bucket list item",
         type: "short",
-        placeholder: "one thing on your list",
+        placeholder: "can be small or big!",
       },
       {
         id: "small_joy",
@@ -255,7 +255,7 @@ export const sections = [
       },
       {
         id: "secret_talent",
-        label: "a secret talent or weird skill",
+        label: "a secret talent or weird skill you've gained recently",
         type: "short",
         placeholder: "something people don't usually know about you",
       },

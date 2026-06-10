@@ -8,13 +8,12 @@ export default function FormSection({ section, answers, onAnswer }) {
         <span className={styles.emoji}>{section.emoji}</span>
         <div>
           <h1 className={styles.title}>{section.title}</h1>
+          {section.blurb && (
+            <p className={styles.blurb}>{section.blurb}</p>
+          )}
           <p className={styles.subtitle}>{section.subtitle}</p>
         </div>
       </div>
-
-      {section.blurb && (
-        <p className={styles.blurb}>{section.blurb}</p>
-      )}
 
       <div className={styles.questions}>
         {section.questions.map((question, i) => (

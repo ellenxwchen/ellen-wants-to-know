@@ -48,10 +48,10 @@
 
 .blurb {
   font-family: var(--font-hand);
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
   color: var(--ink-light);
-  margin-bottom: 36px;
+  margin: 8px 0 12px;
 }
 
 .questions {

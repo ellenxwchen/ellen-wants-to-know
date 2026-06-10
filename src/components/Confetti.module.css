@@ -1,0 +1,25 @@
+.root {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.piece {
+  position: absolute;
+  top: -20px;
+  opacity: 0.9;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(var(--drift), 105vh) rotate(var(--rotate));
+    opacity: 0;
+  }
+}
