@@ -5,15 +5,15 @@ const CODE = import.meta.env.VITE_ACCESS_CODE
 
 const BG_STARS = [
   { cls: 'deco1', char: '✦', size: 32, delay: 0 },
-  { cls: 'deco2', char: '✶', size: 20, delay: 1.5 },
-  { cls: 'deco3', char: '✦', size: 18, delay: 3 },
-  { cls: 'deco4', char: '✶', size: 28, delay: 4.5 },
-  { cls: 'deco5', char: '✦', size: 14, delay: 2 },
+  { cls: 'deco2', char: '✧', size: 20, delay: 1.5 },
+  { cls: 'deco3', char: '✶', size: 18, delay: 3 },
+  { cls: 'deco4', char: '✦', size: 28, delay: 4.5 },
+  { cls: 'deco5', char: '✧', size: 14, delay: 2 },
   { cls: 'deco6', char: '✶', size: 22, delay: 0.8 },
   { cls: 'deco7', char: '✦', size: 16, delay: 3.5 },
-  { cls: 'deco8', char: '✶', size: 26, delay: 5 },
-  { cls: 'deco9', char: '✦', size: 12, delay: 1.2 },
-  { cls: 'deco10', char: '✶', size: 20, delay: 2.8 },
+  { cls: 'deco8', char: '✧', size: 26, delay: 5 },
+  { cls: 'deco9', char: '✶', size: 12, delay: 1.2 },
+  { cls: 'deco10', char: '✦', size: 20, delay: 2.8 },
 ]
 
 let nextId = 0
@@ -83,7 +83,7 @@ export default function Gate({ onUnlock }) {
       ))}
 
       <div className={styles.card}>
-        <div className={styles.emoji}>🔮</div>
+        <img className={styles.emoji} src={`${import.meta.env.BASE_URL}favicon.png`} alt="" />
         <h1 className={styles.title}>ellen wants to know</h1>
         <p className={styles.sub}>psst — what's the secret word?</p>
         <form onSubmit={handleSubmit} className={styles.form}>

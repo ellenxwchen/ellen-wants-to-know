@@ -2,9 +2,9 @@ export const sections = [
   {
     id: "intro",
     title: "hey, you! 👋",
-    subtitle: "before we get into it, who are you?",
+    subtitle: "",
     emoji: "✦",
-    blurb: "hi ♡ if you're reading this, you're someone i love very much and i miss greatly! i want to make sure i still know your favourite things even though we're far apart.",
+    blurb: "hi ♡ if you're reading this, you're someone i love very much and i miss greatly! i want to make sure i still know your favourite things even though we're far apart. \n\n feel free to answer as many, or as few questions as you'd like! \n\n with love, ellen ♡",
     questions: [
       {
         id: "name",
@@ -24,7 +24,7 @@ export const sections = [
         id: "favorite_cuisine",
         label: "top 3 favourite cuisines",
         type: "short",
-        placeholder: "e.g. japanese, italian, ethiopian...",
+        placeholder: "e.g. chinese, italian, ethiopian...",
       },
       {
         id: "favorite_meal",
@@ -40,7 +40,7 @@ export const sections = [
       },
       {
         id: "disliked_flavors",
-        label: "flavors you dislike",
+        label: "flavours you dislike",
         type: "multicheck",
         options: ["sour", "bitter", "very spicy", "fishy", "funky/fermented", "overly sweet", "none — I eat everything"],
       },
@@ -132,12 +132,6 @@ export const sections = [
         type: "short",
         placeholder: "the thing that gets you every time",
       },
-      {
-        id: "bad_habit",
-        label: "a bad habit you're working on",
-        type: "short",
-        placeholder: "be honest :) ",
-      },
     ],
   },
   {
@@ -148,7 +142,7 @@ export const sections = [
     questions: [
       {
         id: "flavor_you_would_be",
-        label: "if you were a flavor, what would you be?",
+        label: "if you were a flavour, what would you be?",
         type: "short",
         placeholder: "and why",
       },
@@ -159,12 +153,6 @@ export const sections = [
         placeholder: "pls don't say wolf",
       },
       {
-        id: "warning_label",
-        label: "your personal warning label",
-        type: "short",
-        placeholder: "⚠️ warning: ...",
-      },
-      {
         id: "having_fun",
         label: "are you having fun answering these questions?",
         type: "choice",
@@ -173,21 +161,15 @@ export const sections = [
       },
       {
         id: "free_day",
-        label: "a free day with zero responsibilities — what do you do?",
+        label: "surprise! you have a free day with zero responsibilities. what do you do?",
         type: "long",
         placeholder: "walk me through it",
-      },
-      {
-        id: "superpower",
-        label: "one superpower",
-        type: "short",
-        placeholder: "you can only pick one!!",
       },
       {
         id: "master_skill",
         label: "a skill you'd master instantly if you could",
         type: "short",
-        placeholder: "doing laundry? ",
+        placeholder: "music, language, chores !",
       },
       {
         id: "phone_verification",
@@ -200,14 +182,29 @@ export const sections = [
   {
     id: "aesthetic",
     title: "aesthetic & taste",
-    subtitle: "",
+    subtitle: "your vibes",
     emoji: "✨",
     questions: [
+      {
+        id: "wardrobe",
+        label: "what colour do you wear the most?",
+        type: "short",
+      },
       {
         id: "silver_or_gold",
         label: "silver, gold, or both?",
         type: "choice",
         options: ["silver", "gold", "both", "neither"],
+      },
+      {
+        id: "colour",
+        label: "whats your current favourite colour?",
+        type: "short",
+      },
+      {
+        id: "gift",
+        label: "help me pick out a gift for you? jk! unless...",
+        type: "short",
       },
     ],
   },
@@ -251,13 +248,27 @@ export const sections = [
         id: "small_joy",
         label: "something small that makes you unreasonably happy",
         type: "short",
-        placeholder: "the little thing",
+        placeholder: "whatever keeps you sane",
       },
       {
         id: "secret_talent",
         label: "a secret talent or weird skill you've gained recently",
         type: "short",
         placeholder: "something people don't usually know about you",
+      },
+    ],
+  },
+  {
+    id: "final",
+    title: "one last thing",
+    subtitle: "the floor is yours",
+    emoji: "💌",
+    questions: [
+      {
+        id: "anything_else",
+        label: "anything else you'd want me to know?",
+        type: "long",
+        placeholder: "literally anything! a thought, a recommendation, whatever's on your mind, anything that wasn't covered before",
       },
     ],
   },

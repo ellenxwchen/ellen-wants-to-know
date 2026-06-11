@@ -15,12 +15,12 @@
 }
 
 .dot.done {
-  background: var(--terracotta-light);
-  border-color: var(--terracotta);
+  background: var(--accent-light);
+  border-color: var(--accent);
 }
 
 .dot.active {
-  background: var(--terracotta);
-  border-color: var(--terracotta);
+  background: var(--accent);
+  border-color: var(--accent);
   transform: scale(1.3);
 }

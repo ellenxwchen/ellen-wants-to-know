@@ -52,6 +52,7 @@
   line-height: 1.6;
   color: var(--ink-light);
   margin: 8px 0 12px;
+  white-space: pre-line;
 }
 
 .questions {

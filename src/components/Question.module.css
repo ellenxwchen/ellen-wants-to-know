@@ -35,16 +35,16 @@
 .textarea {
   font-family: var(--font-body);
   font-size: 16px;
-  color: var(--ink);
+  color: var(--ink-light);
   background: var(--paper);
-  border: 1px solid var(--cream-dark);
-  border-bottom: 2px solid var(--ink-faint);
-  border-radius: var(--radius) var(--radius) 0 0;
+  border: 1.5px solid var(--cream-dark);
+  border-radius: var(--radius);
   padding: 12px 14px;
   width: 100%;
   transition: border-color 0.15s, box-shadow 0.15s;
   outline: none;
   -webkit-appearance: none;
+  caret-color: var(--accent-dark);
 }
 
 .input {
@@ -62,9 +62,8 @@
 
 .input:focus,
 .textarea:focus {
-  border-color: var(--cream-dark);
-  border-bottom-color: var(--terracotta);
-  box-shadow: 0 2px 0 var(--terracotta);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(169, 214, 232, 0.25);
 }
 
 .textarea {
@@ -86,7 +85,7 @@
   color: var(--ink-light);
   background: var(--paper);
   border: 1.5px solid var(--cream-dark);
-  border-radius: 2px;
+  border-radius: var(--radius);
   padding: 8px 16px;
   cursor: pointer;
   transition: border-color 0.15s, background 0.15s, color 0.15s, transform 0.1s;
@@ -94,16 +93,15 @@
 }
 
 .choice:hover {
-  border-color: var(--terracotta-light);
+  border-color: var(--accent-light);
   color: var(--ink);
   transform: translateY(-1px);
 }
 
 .choice.choiceSelected {
-  background: var(--terracotta);
-  border-color: var(--terracotta);
-  color: var(--paper);
-  font-weight: 600;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--ink);
 }
 
 /* multicheck + freeform */
@@ -126,6 +124,16 @@
   font-size: 24px;
   padding: 14px 32px;
   letter-spacing: 0.5px;
+}
+
+.choicesFun .choiceFun:nth-child(1) {
+  font-size: 14px;
+  padding: 6px 14px;
+}
+
+.choicesFun .choiceFun:nth-child(2) {
+  font-size: 18px;
+  padding: 8px 18px;
 }
 
 .choiceFun.choiceSelected {
@@ -153,7 +161,7 @@
   color: var(--ink-light);
   background: var(--paper);
   border: 1.5px solid var(--cream-dark);
-  border-radius: 2px;
+  border-radius: var(--radius);
   padding: 8px 14px;
   cursor: pointer;
   display: flex;
@@ -164,12 +172,12 @@
 }
 
 .check:hover {
-  border-color: var(--terracotta-light);
+  border-color: var(--accent-light);
 }
 
 .check.checkSelected {
-  border-color: var(--terracotta);
-  background: rgba(196, 97, 74, 0.06);
+  border-color: var(--accent);
+  background: rgba(169, 214, 232, 0.1);
   color: var(--ink);
 }
 
@@ -177,12 +185,12 @@
   width: 18px;
   height: 18px;
   border: 1.5px solid currentColor;
-  border-radius: 2px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   font-size: 12px;
   font-weight: 700;
-  color: var(--terracotta);
+  color: var(--accent);
 }

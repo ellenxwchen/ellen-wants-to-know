@@ -8,7 +8,8 @@ function AutoGrowTextarea({ className, value, onChange, ...props }) {
     const el = ref.current
     if (!el) return
     el.style.height = 'auto'
-    el.style.height = `${el.scrollHeight}px`
+    const borderHeight = el.offsetHeight - el.clientHeight
+    el.style.height = `${el.scrollHeight + borderHeight}px`
   }, [value])
 
   return (
