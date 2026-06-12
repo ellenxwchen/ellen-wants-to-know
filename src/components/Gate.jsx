@@ -85,7 +85,7 @@ export default function Gate({ onUnlock }) {
       <div className={styles.card}>
         <img className={styles.emoji} src={`${import.meta.env.BASE_URL}favicon.png`} alt="" />
         <h1 className={styles.title}>ellen wants to know</h1>
-        <p className={styles.sub}>psst — what's the secret word?</p>
+        <p className={styles.sub}>psst! what's the secret word?</p>
         <form onSubmit={handleSubmit} className={styles.form}>
           <input
             className={`${styles.input} ${shaking ? styles.shake : ''}`}

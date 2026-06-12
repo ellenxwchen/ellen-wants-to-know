@@ -11,6 +11,7 @@ export const sections = [
         label: "your name",
         type: "short",
         placeholder: "what do you go by?",
+        required: true,
       },
     ],
   },
@@ -203,7 +204,7 @@ export const sections = [
       },
       {
         id: "gift",
-        label: "help me pick out a gift for you? jk! unless...",
+        label: "help me pick out a gift for you? jk! unless...?",
         type: "short",
       },
     ],

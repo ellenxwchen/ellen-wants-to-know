@@ -15,6 +15,10 @@
   cursor: default;
 }
 
+.required {
+  color: var(--error);
+}
+
 .labelNum {
   font-family: var(--font-body);
   font-size: 16px;

@@ -90,6 +90,20 @@
   transform: translateY(0);
 }
 
+.nextBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+}
+
+.error {
+  color: var(--error);
+  font-size: 14px;
+  font-style: italic;
+  margin: 16px 0 0;
+}
+
 /* submitted state */
 .submitted {
   min-height: 100vh;
@@ -142,7 +156,8 @@
 }
 
 .submittedEmoji {
-  font-size: 52px;
+  width: 64px;
+  height: auto;
   margin-bottom: 20px;
 }
 

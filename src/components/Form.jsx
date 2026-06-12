@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { sections } from '../data/questions'
+import { supabase } from '../lib/supabase'
 import FormSection from './FormSection'
 import ProgressBar from './ProgressBar'
 import Confetti from './Confetti'
@@ -22,16 +23,44 @@ export default function Form() {
   const [currentSection, setCurrentSection] = useState(0)
   const [answers, setAnswers] = useState({})
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState(null)
+  const [validationError, setValidationError] = useState(null)
 
   const section = sections[currentSection]
   const isLast = currentSection === sections.length - 1
 
   function handleAnswer(questionId, value) {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
+    setValidationError(null)
   }
 
-  function handleNext() {
+  function isAnswerEmpty(question, value) {
+    if (question.type === 'multicheck') {
+      return !Array.isArray(value) || value.length === 0
+    }
+    if (question.type === 'multicheck_freeform') {
+      return !(value?.selected?.length) && !value?.freeform?.trim()
+    }
+    return !value || !String(value).trim()
+  }
+
+  async function handleNext() {
+    const missing = section.questions.find(q => q.required && isAnswerEmpty(q, answers[q.id]))
+    if (missing) {
+      setValidationError(`pls answer "${missing.label}"!`)
+      return
+    }
+
     if (isLast) {
+      setSubmitting(true)
+      setSubmitError(null)
+      const { error } = await supabase.from('responses').insert({ answers })
+      setSubmitting(false)
+      if (error) {
+        setSubmitError("hmm, something went wrong — mind trying again?")
+        return
+      }
       setSubmitted(true)
     } else {
       setCurrentSection(prev => prev + 1)
@@ -58,13 +87,13 @@ export default function Form() {
           </span>
         ))}
         <div className={styles.submittedCard}>
-          <div className={styles.submittedEmoji}>🎉</div>
+          <img className={styles.submittedEmoji} src={`${import.meta.env.BASE_URL}heart.png`} alt="" />
           <h1 className={styles.submittedTitle}>you're done!</h1>
           <p className={styles.submittedSub}>
             ellen is going to love reading this!!!!
           </p>
           <p className={styles.submittedNote}>
-            (submissions coming soon — backend isn't wired up yet)
+            your answers have been sent off ✦
           </p>
         </div>
       </div>
@@ -98,14 +127,17 @@ export default function Form() {
           onAnswer={handleAnswer}
         />
 
+        {validationError && <p className={styles.error}>{validationError}</p>}
+        {submitError && <p className={styles.error}>{submitError}</p>}
+
         <div className={styles.nav}>
           {currentSection > 0 && (
             <button className={styles.backBtn} onClick={handleBack}>
               ← back
             </button>
           )}
-          <button className={styles.nextBtn} onClick={handleNext}>
-            {isLast ? 'submit ✦' : 'next →'}
+          <button className={styles.nextBtn} onClick={handleNext} disabled={submitting}>
+            {isLast ? (submitting ? 'sending...' : 'submit ✦') : 'next →'}
           </button>
         </div>
       </main>

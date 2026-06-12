@@ -30,6 +30,7 @@ export default function Question({ question, value, onChange, index }) {
       <label className={styles.label} htmlFor={question.id}>
         <span className={styles.labelNum}>{String(index + 1).padStart(2, '0')}.</span>
         {question.label}
+        {question.required && <span className={styles.required}>*</span>}
       </label>
 
       {question.hint && (
