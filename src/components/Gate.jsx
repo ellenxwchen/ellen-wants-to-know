@@ -26,6 +26,7 @@ export default function Gate({ onUnlock }) {
   function handleSubmit(e) {
     e.preventDefault()
     if (input.trim().toLowerCase() === CODE?.toLowerCase()) {
+      document.activeElement?.blur()
       onUnlock()
     } else {
       setShaking(true)
