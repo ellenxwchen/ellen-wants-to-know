@@ -4,7 +4,7 @@ export const sections = [
     title: "hey, you! 👋",
     subtitle: "",
     emoji: "✦",
-    blurb: "hi ♡ if you're reading this, you're someone i love very much and i miss greatly! i want to make sure i still know your favourite things even though we're far apart. \n\n feel free to answer as many, or as few questions as you'd like! \n\n with love, ellen ♡",
+    blurb: "hi ♡ if you're reading this, you're someone i love very much and i miss greatly! i want to make sure i still know your favourite things even though we're far apart. \n\n feel free to answer as many, or as few questions as you'd like! you can add as much or as little detail as you'd like! \n\n with love, ellen ♡",
     questions: [
       {
         id: "name",
@@ -171,12 +171,6 @@ export const sections = [
         label: "a skill you'd master instantly if you could",
         type: "short",
         placeholder: "music, language, chores !",
-      },
-      {
-        id: "phone_verification",
-        label: "your loved ones think you were kidnapped!! what question would they ask to make sure it's actually you?",
-        type: "long",
-        placeholder: "something only you would know the answer to",
       },
     ],
   },
