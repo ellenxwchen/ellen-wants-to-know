@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { sections } from '../data/questions'
 import { supabase } from '../lib/supabase'
 import FormSection from './FormSection'
@@ -29,6 +29,10 @@ export default function Form() {
 
   const section = sections[currentSection]
   const isLast = currentSection === sections.length - 1
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [currentSection])
 
   function handleAnswer(questionId, value) {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
@@ -64,13 +68,11 @@ export default function Form() {
       setSubmitted(true)
     } else {
       setCurrentSection(prev => prev + 1)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
 
   function handleBack() {
     setCurrentSection(prev => prev - 1)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   if (submitted) {
